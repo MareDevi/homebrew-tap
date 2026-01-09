@@ -1,14 +1,14 @@
 class BilibiliTui < Formula
   desc "A terminal user interface (TUI) client for Bilibili"
   homepage "https://github.com/MareDevi/bilibili-tui"
-  version "1.0.4"
+  version "1.0.5"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.4/bilibili-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "d32ab48eadd699d915ed57c47972f6f35e774e5054ca12e9d3cbb042acde3def"
+      url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.5/bilibili-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "f87a2f9e2b41d050728e671e48aff8d82ea64bd3407bf8d58bd4fe6079f149df"
   end
   if OS.linux? && Hardware::CPU.intel?
-      url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.4/bilibili-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "178a40210780262f03f2e8fd8cbe38d169e0d11917c44760662597a09db51521"
+      url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.5/bilibili-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "524b245574e1e7da5acd8104befe701d8ed3892b83a29248448dacff66ca233f"
   end
   license "MIT"
 
