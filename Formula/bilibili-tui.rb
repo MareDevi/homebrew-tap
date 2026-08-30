@@ -1,14 +1,14 @@
 class BilibiliTui < Formula
   desc "A terminal user interface (TUI) client for Bilibili"
   homepage "https://github.com/MareDevi/bilibili-tui"
-  version "1.0.13"
+  version "1.0.14"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.13/bilibili-tui-aarch64-apple-darwin.tar.xz"
-    sha256 "5e307c61326a7cd0e03bff1221dfe5e919cc66a9366969eabbfb5d5a4bc0beca"
+    url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.14/bilibili-tui-aarch64-apple-darwin.tar.xz"
+    sha256 "795fd0e935406aff9c3aa31fcaf275b31b9e479764c38c80823a586619b2a62b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.13/bilibili-tui-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "45fd165d44f02b28693de3c316a22ce2b87b4473fc2989549f8b8e327791265c"
+    url "https://github.com/MareDevi/bilibili-tui/releases/download/v1.0.14/bilibili-tui-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "8bb2f6fddc76abee9d6c6a65b19196f2a5bee2807a5b5555c6b85fe7367b0f5a"
   end
   license "MIT"
 
@@ -34,8 +34,12 @@ class BilibiliTui < Formula
   end
 
   def install
-    bin.install "bilibili-tui" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bilibili-tui" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "bilibili-tui"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "bilibili-tui"
+    end
 
     install_binary_aliases!
 
